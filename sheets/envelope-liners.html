@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Envelope Liners</title>
+<link rel="stylesheet" href="../shared/print.css">
+<style>
+  .liner-grid { display: grid; grid-template-columns: repeat(2, 3.3in); grid-template-rows: repeat(2, 3.82in); gap: 0.26in; }
+  .liner { position: relative; width: 3.3in; height: 3.82in; border: 1px dashed #b8b1a9; padding: 0.1in; display: flex; flex-direction: column; }
+  .liner .tag {
+    position: absolute; top: -9px; left: 10px; font-size: 7.5pt; color: #b3aca4;
+    background: #ffffff; padding: 0 6px; letter-spacing: 0.06em;
+  }
+  .liner .pattern { flex: 1; position: relative; overflow: hidden; }
+  .liner .hint-line { font-size: 7pt; color: #b3aca4; text-align: center; margin-top: 5px; line-height: 1.4; }
+
+  .p-scallop {
+    background: var(--rose-soft);
+  }
+  .p-scallop::before {
+    content: "";
+    position: absolute; inset: 0.08in;
+    background:
+      radial-gradient(circle 9px at 50% 100%, transparent 8px, var(--rose) 8.5px, var(--rose) 100%) 0 0 / 30px 15px repeat-x,
+      radial-gradient(circle 7px at 50% 0, var(--sage) 6.5px, transparent 7px) 7px 12px / 30px 15px repeat-x;
+  }
+  .p-stripes {
+    background: repeating-linear-gradient(135deg, var(--gold-soft) 0px, var(--gold-soft) 10px, #fffdf6 10px, #fffdf6 20px);
+  }
+  .p-dotgrid {
+    background: radial-gradient(circle 2.5px, var(--plum) 2.2px, transparent 2.6px) 0 0 / 14px 14px, #ffffff;
+  }
+  .p-bloom {
+    background:
+      radial-gradient(circle 5px, var(--sage) 4.5px, transparent 5px) 0 0 / 22px 22px,
+      radial-gradient(circle 3px, var(--rose) 2.6px, transparent 3px) 11px 11px / 22px 22px,
+      #fffdf6;
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="sheet-head">
+    <div class="kicker">Gratitude Without Guilt</div>
+    <h1>Envelope Liners &mdash; Two Patterns &times; Two Colors</h1>
+    <div class="hint">Sized for A2 envelopes (4&#x215C;&quot; &times; 5&#190;&quot; inside flap). Cut a rectangle, place inside the envelope with the design peeking above the flap, then glue and crease the flap down.</div>
+  </div>
+
+  <div class="liner-grid">
+    <div class="liner"><span class="tag">liner 1</span><div class="pattern p-scallop"></div><div class="hint-line">soft scallops &mdash; rose &amp; sage</div></div>
+    <div class="liner"><span class="tag">liner 2</span><div class="pattern p-stripes"></div><div class="hint-line">diagonal ribbon &mdash; warm gold</div></div>
+    <div class="liner"><span class="tag">liner 3</span><div class="pattern p-dotgrid"></div><div class="hint-line">tiny dots &mdash; plum on white</div></div>
+    <div class="liner"><span class="tag">liner 4</span><div class="pattern p-bloom"></div><div class="hint-line">modern blooms &mdash; sage &amp; rose</div></div>
+  </div>
+
+  <div class="prompts" style="margin-top: 0.3in;">
+    <b>How to use</b> &mdash; no glue stick needed for a test fit; tape works for one-off notes.<br>
+    <span>On A2 envelopes, a plain rectangle usually reads perfectly once the flap is folded.</span> &nbsp;
+    <span>For pointed flaps, trace the folded flap on the liner and trim along the trace.</span> &nbsp;
+    <span>Match liner tone to the card: blush scallops for showers, gold ribbon for weddings.</span>
+  </div>
+
+  <div class="foot"><span>Free printable &mdash; print &amp; reuse</span><span>Gratitude without guilt</span></div>
+</div>
+</body>
+</html>

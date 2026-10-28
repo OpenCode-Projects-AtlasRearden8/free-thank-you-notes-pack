@@ -1,0 +1,130 @@
+@page {
+  size: letter;
+  margin: 0;
+}
+
+:root {
+  --ink: #33302e;
+  --soft: #6f6660;
+  --cream: #fdfaf5;
+  --rose: #e2939b;
+  --rose-soft: #f7e6e7;
+  --sage: #7d9a7f;
+  --sage-soft: #e9f0e9;
+  --gold: #c9a25e;
+  --gold-soft: #f6ecda;
+  --blue: #6c8bb3;
+  --blue-soft: #e7eef6;
+  --plum: #987190;
+  --plum-soft: #f3e6ee;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: #ffffff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sheet {
+  width: 8.5in;
+  height: 11in;
+  position: relative;
+  padding: 0.55in 0.6in;
+  overflow: hidden;
+  page-break-after: always;
+  background: #ffffff;
+}
+
+.want-cream { background: var(--cream); }
+
+/* ---------- cut guides ---------- */
+.cut {
+  border: 1px dashed #c9c2ba;
+  position: relative;
+}
+.cut::after {
+  content: "\2702 cut";
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  font-size: 7.5pt;
+  color: #b3aca4;
+  background: inherit;
+  padding: 0 6px;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- headings ---------- */
+.sheet-head {
+  text-align: center;
+  margin-bottom: 0.22in;
+}
+.sheet-head .kicker {
+  font-size: 8pt;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+.sheet-head h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17pt;
+  font-weight: normal;
+  margin-top: 4px;
+}
+.sheet-head .hint {
+  font-size: 8pt;
+  color: var(--soft);
+  margin-top: 4px;
+}
+
+/* ---------- fill-in helpers ---------- */
+.blank {
+  display: inline-block;
+  min-width: 1.4in;
+  border-bottom: 1.5px dotted #9a918a;
+  margin: 0 2px;
+}
+.blank.wide { min-width: 3.2in; }
+
+/* ---------- wording prompts panel ---------- */
+.prompts {
+  border: 1px dashed #cfc8c0;
+  background: #fffdf9;
+  padding: 7px 10px;
+  font-size: 7.6pt;
+  color: var(--soft);
+  line-height: 1.45;
+}
+.prompts b {
+  color: var(--ink);
+  font-size: 7.2pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.prompts span::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  color: #b3aca4;
+}
+.prompts span::after {
+  content: "\201D";
+  font-family: Georgia, serif;
+  color: #b3aca4;
+}
+
+/* ---------- footers ---------- */
+.foot {
+  position: absolute;
+  bottom: 0.28in;
+  left: 0.6in;
+  right: 0.6in;
+  display: flex;
+  justify-content: space-between;
+  font-size: 7pt;
+  color: #b3aca4;
+  letter-spacing: 0.05em;
+}

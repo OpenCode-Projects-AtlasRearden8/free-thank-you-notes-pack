@@ -1,0 +1,15 @@
+{
+  "name": "gratitude-without-guilt-printables",
+  "version": "1.0.0",
+  "description": "Free printables for gratitude without guilt: fill-in-the-blank thank-you cards for every occasion, envelope liners, and a note-sender tracker. Local build, zero signups.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
